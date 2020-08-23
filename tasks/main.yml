@@ -1,0 +1,56 @@
+---
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: check for {{ k9s_install_dir }}
+  become: yes
+  stat:
+    path: '{{ k9s_install_dir }}'
+  changed_when: False
+  register: k9s_binary
+- when: not k9s_binary.stat.exists
+  block:
+    - name: download {{ k9s_url }}...
+      become: yes
+      become_user: root
+      get_url:
+        url: '{{ k9s_url }}'
+        dest: /tmp/{{ k9s_tgz }}
+        checksum: '{{ k9s_checksum }}'
+        mode: 0644
+    - name: mkdir {{ k9s_install_dir }}
+      become: yes
+      become_user: root
+      file:
+        path: '{{ k9s_install_dir }}'
+        state: directory
+        mode: 0755
+    - name: unarchive /tmp/{{ k9s_tgz }}
+      become: yes
+      become_user: root
+      unarchive:
+        remote_src: yes
+        src: /tmp/{{ k9s_tgz }}
+        dest: '{{ k9s_install_dir }}'
+        creates: '{{ k9s_installed_exe }}'
+  always:
+    - name: clean up /tmp/{{ k9s_tgz }}
+      become: yes
+      become_user: root
+      file:
+        path: /tmp/{{ k9s_tgz }}
+        state: absent
+- name: link {{ k9s_installed_link }} to {{ k9s_installed_exe }}
+  become: yes
+  become_user: root
+  file:
+    src: '{{ k9s_installed_exe }}'
+    dest: '{{ k9s_installed_link }}'
+    state: link
