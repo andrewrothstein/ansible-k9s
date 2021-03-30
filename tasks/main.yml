@@ -22,7 +22,7 @@
       become_user: root
       get_url:
         url: '{{ k9s_url }}'
-        dest: /tmp/{{ k9s_tgz }}
+        dest: '{{ k9s_tmp_tgz }}'
         checksum: '{{ k9s_checksum }}'
         mode: 0644
     - name: mkdir {{ k9s_install_dir }}
@@ -32,20 +32,20 @@
         path: '{{ k9s_install_dir }}'
         state: directory
         mode: 0755
-    - name: unarchive /tmp/{{ k9s_tgz }}
+    - name: unarchive {{ k9s_tmp_tgz }}
       become: yes
       become_user: root
       unarchive:
         remote_src: yes
-        src: /tmp/{{ k9s_tgz }}
+        src: '{{ k9s_tmp_tgz }}'
         dest: '{{ k9s_install_dir }}'
         creates: '{{ k9s_installed_exe }}'
   always:
-    - name: clean up /tmp/{{ k9s_tgz }}
+    - name: rm {{ k9s_tmp_tgz }}
       become: yes
       become_user: root
       file:
-        path: /tmp/{{ k9s_tgz }}
+        path: '{{ k9s_tmp_tgz }}'
         state: absent
 - name: link {{ k9s_installed_link }} to {{ k9s_installed_exe }}
   become: yes
