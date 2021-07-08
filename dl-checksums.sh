@@ -10,7 +10,7 @@ dl() {
     local os=$3
     local arch=$4
     local platform="${os}_${arch}"
-    local file="${APP}_${ver}_${platform}.tar.gz"
+    local file="${APP}_${platform}.tar.gz"
     local url=$MIRROR/$ver/$file
     printf "    # %s\n" $url
     printf "    %s: sha256:%s\n" $platform $(grep $file $lchecksums | awk '{print $1}')
@@ -36,4 +36,4 @@ dl_ver() {
     dl $ver $lchecksums Windows x86_64
 }
 
-dl_ver ${1:-v0.24.10}
+dl_ver ${1:-v0.24.14}
