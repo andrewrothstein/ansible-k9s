@@ -1,6 +1,6 @@
 andrewrothstein.k9s
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-k9s.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-k9s)
+![Build Status](https://github.com/andrewrothstein/ansible-k9s/actions/workflows/build.yml/badge.svg)
 
 Installs [k9s](https://k9scli.io/).
 
