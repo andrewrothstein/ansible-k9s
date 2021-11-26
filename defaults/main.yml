@@ -1,6 +1,6 @@
 ---
 # defaults file for k9s
-k9s_ver: v0.25.3
+k9s_ver: v0.25.6
 k9s_os: Linux
 k9s_arch: x86_64
 k9s_parent_install_dir: /usr/local
@@ -42,3 +42,15 @@ k9s_checksums:
     Linux_x86_64: sha256:88effd358f8251da5d14956799d0c7619aa90d9aac8142dabe820e2a67944429
     # https://github.com/derailed/k9s/releases/download/v0.25.3/k9s_Windows_x86_64.tar.gz
     Windows_x86_64: sha256:d626a228137f9cfdce982263ac0847bf5cbe2a3fcfb79e6c162d26da3e082d10
+  # https://github.com/derailed/k9s/releases/download/v0.25.6/checksums.txt
+  v0.25.6:
+    # https://github.com/derailed/k9s/releases/download/v0.25.6/k9s_Darwin_x86_64.tar.gz
+    Darwin_x86_64: sha256:bd85771a0a042bab20dc5ca80a19d1bc338de8051019c3fd7eabb5572e309e59
+    # https://github.com/derailed/k9s/releases/download/v0.25.6/k9s_Linux_arm.tar.gz
+    Linux_arm: sha256:487971c3491d57fecc4f152f24ef1cc5b839d7a597d12adbe2678035cc79318f
+    # https://github.com/derailed/k9s/releases/download/v0.25.6/k9s_Linux_arm64.tar.gz
+    Linux_arm64: sha256:f86cd6b77a37ad548dbbd37ad1e3eb2e6d80267a24e84e4cdb45e8262c6bd467
+    # https://github.com/derailed/k9s/releases/download/v0.25.6/k9s_Linux_x86_64.tar.gz
+    Linux_x86_64: sha256:b83e1d9e3862a97e9e2ecff7fa471f455fb3a047759d0234f712951e0e94c40f
+    # https://github.com/derailed/k9s/releases/download/v0.25.6/k9s_Windows_x86_64.tar.gz
+    Windows_x86_64: sha256:41efd42b994fd5b7ec05d1a1d80bdaeb56c72e25e7ee9bc79024fa97b9410d78
