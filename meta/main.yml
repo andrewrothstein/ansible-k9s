@@ -33,5 +33,4 @@ galaxy_info:
   role_name: k9s
 
 dependencies:
-  - role: andrewrothstein.unarchive-deps
-    version: v1.2.2
+  - andrewrothstein.unarchive-deps

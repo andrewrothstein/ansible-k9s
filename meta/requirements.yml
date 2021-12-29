@@ -1,0 +1,4 @@
+---
+roles:
+  - name: andrewrothstein.unarchive-deps
+    version: v1.2.2
