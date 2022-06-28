@@ -23,17 +23,22 @@ dl_ver() {
     local lchecksums="$DIR/${APP}-${ver}-${checksums}"
     if [ ! -e $lchecksums ];
     then
-        wget -q -O $lchecksums $url
+        curl -sSLf -o $lchecksums $url
     fi
 
     printf "  # %s\n" $url
     printf "  %s:\n" $ver
 
+    dl $ver $lchecksums Darwin arm64
     dl $ver $lchecksums Darwin x86_64
     dl $ver $lchecksums Linux arm
     dl $ver $lchecksums Linux arm64
+    dl $ver $lchecksums Linux ppc64le
+    dl $ver $lchecksums Linux s390x
     dl $ver $lchecksums Linux x86_64
+    dl $ver $lchecksums Windows arm
+    dl $ver $lchecksums Windows arm64
     dl $ver $lchecksums Windows x86_64
 }
 
-dl_ver ${1:-v0.25.18}
+dl_ver ${1:-v0.25.19}
