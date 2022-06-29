@@ -1,6 +1,6 @@
 ---
 # defaults file for k9s
-k9s_ver: v0.25.19
+k9s_ver: v0.25.20
 k9s_os: Linux
 k9s_arch: x86_64
 k9s_parent_install_dir: /usr/local
@@ -184,3 +184,25 @@ k9s_checksums:
     Windows_arm64: sha256:ba3deb18ea551e3ab89029c3b85f3d68b088f1406580b0884bd13fe5864a6626
     # https://github.com/derailed/k9s/releases/download/v0.25.19/k9s_Windows_x86_64.tar.gz
     Windows_x86_64: sha256:3f9d7e86ef6fb1ad8a5a4d88b4f083cf3d0d68a76cc7187d507d3a325216b6f0
+  # https://github.com/derailed/k9s/releases/download/v0.25.20/checksums.txt
+  v0.25.20:
+    # https://github.com/derailed/k9s/releases/download/v0.25.20/k9s_Darwin_arm64.tar.gz
+    Darwin_arm64: sha256:ea401db236d1bc6ee325802f6ca2c783dd53772db8b3f2e8397ebcae38e48b46
+    # https://github.com/derailed/k9s/releases/download/v0.25.20/k9s_Darwin_x86_64.tar.gz
+    Darwin_x86_64: sha256:47704a8edf8ba16f8f6ab6f23fd4121ea116d5c48b6bbe7fcba52894233b4c31
+    # https://github.com/derailed/k9s/releases/download/v0.25.20/k9s_Linux_arm.tar.gz
+    Linux_arm: sha256:40434c18ad344e51d90786d61947c70275cda4a02fe485b24de8d12018ac3e43
+    # https://github.com/derailed/k9s/releases/download/v0.25.20/k9s_Linux_arm64.tar.gz
+    Linux_arm64: sha256:8a04bc16ea5f465e2d6e69f0019eef5abca2fe51c6bc64dec3d62e8229653306
+    # https://github.com/derailed/k9s/releases/download/v0.25.20/k9s_Linux_ppc64le.tar.gz
+    Linux_ppc64le: sha256:0ec7ad4d91c8a344280022625dec2c29292d21df6bfd86272b305066cfb8a27e
+    # https://github.com/derailed/k9s/releases/download/v0.25.20/k9s_Linux_s390x.tar.gz
+    Linux_s390x: sha256:7f6eef17a19ae84b73a3d6b392826b75f2073f4aecb3a747b8ef8fa55111c7c4
+    # https://github.com/derailed/k9s/releases/download/v0.25.20/k9s_Linux_x86_64.tar.gz
+    Linux_x86_64: sha256:9cd7ef0a416be160cbccefb568c9a72c403122e3a96d3d8b9c95de9f29586b80
+    # https://github.com/derailed/k9s/releases/download/v0.25.20/k9s_Windows_arm.tar.gz
+    Windows_arm: sha256:92dad92aef3727c9eba7a0f458898b0a6c8a904bc240356ea84c1da98a41621f
+    # https://github.com/derailed/k9s/releases/download/v0.25.20/k9s_Windows_arm64.tar.gz
+    Windows_arm64: sha256:19e0c06ccd9a06bc52377d37bf69c06079f9b94df26dd859747f9514235c2fcf
+    # https://github.com/derailed/k9s/releases/download/v0.25.20/k9s_Windows_x86_64.tar.gz
+    Windows_x86_64: sha256:c3fe96e9e47f357996c142c75d925c4357b77aea204211b2de6e72e4edf82f21
