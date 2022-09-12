@@ -2,7 +2,14 @@
 # defaults file for k9s
 k9s_ver: v0.26.3
 k9s_os: Linux
-k9s_arch: x86_64
+k9s_arch_map:
+  armv6l: arm
+  armv7l: arm
+  aarch64: arm64
+  x86_64: x86_64
+  ppc64le: ppc64le
+  s390x: s390x
+
 k9s_parent_install_dir: /usr/local
 k9s_mirror: https://github.com/derailed/k9s/releases/download
 k9s_checksums:
