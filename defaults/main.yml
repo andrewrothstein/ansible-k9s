@@ -1,6 +1,6 @@
 ---
 # defaults file for k9s
-k9s_ver: v0.26.3
+k9s_ver: v0.26.5
 k9s_arch_map:
   armv6l: arm
   armv7l: arm
@@ -300,3 +300,47 @@ k9s_checksums:
     Windows_arm64: sha256:f841f0b75fa12a33b01ceabb1c8bd628a9a39a3c7bb9072edb9b1ef2dc91f57d
     # https://github.com/derailed/k9s/releases/download/v0.26.3/k9s_Windows_x86_64.tar.gz
     Windows_x86_64: sha256:399f2d9f5934b6b4b0a3d192808f88b7c2432162fad2a08ad9ef8c25ef097e94
+  # https://github.com/derailed/k9s/releases/download/v0.26.4/checksums.txt
+  v0.26.4:
+    # https://github.com/derailed/k9s/releases/download/v0.26.4/k9s_Darwin_arm64.tar.gz
+    Darwin_arm64: sha256:5756314d8b5a30794512250007cef5f7cd7e69ec2a0cfb9dcb25362e0545393a
+    # https://github.com/derailed/k9s/releases/download/v0.26.4/k9s_Darwin_x86_64.tar.gz
+    Darwin_x86_64: sha256:8cd31fe3b6c7daaef7cf1e8eed2e3bbf62a2f109f7b2eab0af03a79bda5ede5c
+    # https://github.com/derailed/k9s/releases/download/v0.26.4/k9s_Linux_arm.tar.gz
+    Linux_arm: sha256:bc479968f66d2af57ad975ddb05466c1f8c3d43a51e5897dbb3f6c86a9613f34
+    # https://github.com/derailed/k9s/releases/download/v0.26.4/k9s_Linux_arm64.tar.gz
+    Linux_arm64: sha256:3e6764c5e600f4a01ce6d9fa4ff4cfee9e6210319abe6f686ee0f3080350599b
+    # https://github.com/derailed/k9s/releases/download/v0.26.4/k9s_Linux_ppc64le.tar.gz
+    Linux_ppc64le: sha256:ebb36d23df9a0c282d41bda1d64109ff7d07778693fca16d5458c7aec3c94341
+    # https://github.com/derailed/k9s/releases/download/v0.26.4/k9s_Linux_s390x.tar.gz
+    Linux_s390x: sha256:149fac7ee4958bd050d2b9700a1b6a0d9e7f5ec81f0651693cb48a77879f71a5
+    # https://github.com/derailed/k9s/releases/download/v0.26.4/k9s_Linux_x86_64.tar.gz
+    Linux_x86_64: sha256:cb3edcdf01580b88fbfd36df47c414155d2bb1fb2e33302af370702fd7fed9b6
+    # https://github.com/derailed/k9s/releases/download/v0.26.4/k9s_Windows_arm.tar.gz
+    Windows_arm: sha256:734ee132a11fa56d44254da30a1111c6631186b520d5f9aa583c6869a538788e
+    # https://github.com/derailed/k9s/releases/download/v0.26.4/k9s_Windows_arm64.tar.gz
+    Windows_arm64: sha256:b458566ddb83fe6c617b627536836c6ae8751ac63810165ccad65f51f2e904bd
+    # https://github.com/derailed/k9s/releases/download/v0.26.4/k9s_Windows_x86_64.tar.gz
+    Windows_x86_64: sha256:2636e26ee30fb87ff63cc6cd46de789406319f319376084ff87511a73853ec93
+  # https://github.com/derailed/k9s/releases/download/v0.26.5/checksums.txt
+  v0.26.5:
+    # https://github.com/derailed/k9s/releases/download/v0.26.5/k9s_Darwin_arm64.tar.gz
+    Darwin_arm64: sha256:9620f33947ca17d8eda6e3432b64b55b5a8890480514cc34516cb58bc308c828
+    # https://github.com/derailed/k9s/releases/download/v0.26.5/k9s_Darwin_x86_64.tar.gz
+    Darwin_x86_64: sha256:74ca170ecaed2e8951c146a68c421d661fbbb253f05e69ff48a3518264c43c67
+    # https://github.com/derailed/k9s/releases/download/v0.26.5/k9s_Linux_arm.tar.gz
+    Linux_arm: sha256:f0f193e0fb1a3b8c533a10fe337c3052dbd1c56456298f660848dc61d406b0eb
+    # https://github.com/derailed/k9s/releases/download/v0.26.5/k9s_Linux_arm64.tar.gz
+    Linux_arm64: sha256:62bc8fe98ad035a64bbeede91bdd57de357af3059bd80975a9d22b6b072d97f8
+    # https://github.com/derailed/k9s/releases/download/v0.26.5/k9s_Linux_ppc64le.tar.gz
+    Linux_ppc64le: sha256:47b7294141faee56be33615c5246e998c565ea56ef93ce7d0eeb9f067beb40ed
+    # https://github.com/derailed/k9s/releases/download/v0.26.5/k9s_Linux_s390x.tar.gz
+    Linux_s390x: sha256:a8c950b4dbb6f3b797bddc05d9b5fc0f918e8bb8d3c25d40117fdaf1c9efd30e
+    # https://github.com/derailed/k9s/releases/download/v0.26.5/k9s_Linux_x86_64.tar.gz
+    Linux_x86_64: sha256:8ae556d05b4744f7b79cc71549e4096daa9c6b913be88ee43be42ef800137bc3
+    # https://github.com/derailed/k9s/releases/download/v0.26.5/k9s_Windows_arm.tar.gz
+    Windows_arm: sha256:a4bf119cd9d3e512a190e12b7c474427c506d668daf05aad77a033904af7360c
+    # https://github.com/derailed/k9s/releases/download/v0.26.5/k9s_Windows_arm64.tar.gz
+    Windows_arm64: sha256:6adfc6d914b685ddc96b88d33edb7ac2913d7c503d353473288ed8bc1afdd101
+    # https://github.com/derailed/k9s/releases/download/v0.26.5/k9s_Windows_x86_64.tar.gz
+    Windows_x86_64: sha256:62cda0feb9b7eb9b939d4d51987424199c70e091af5432c3683432e5ef11accb
