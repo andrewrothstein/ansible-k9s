@@ -30,15 +30,15 @@ dl_ver() {
     printf "  %s:\n" $ver
 
     dl $ver $lchecksums Darwin arm64
-    dl $ver $lchecksums Darwin x86_64
+    dl $ver $lchecksums Darwin amd64
     dl $ver $lchecksums Linux arm
     dl $ver $lchecksums Linux arm64
     dl $ver $lchecksums Linux ppc64le
     dl $ver $lchecksums Linux s390x
-    dl $ver $lchecksums Linux x86_64
+    dl $ver $lchecksums Linux amd64
     dl $ver $lchecksums Windows arm
     dl $ver $lchecksums Windows arm64
-    dl $ver $lchecksums Windows x86_64
+    dl $ver $lchecksums Windows amd64
 }
 
-dl_ver ${1:-v0.26.7}
+dl_ver ${1:-v0.27.0}
