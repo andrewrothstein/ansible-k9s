@@ -12,7 +12,7 @@
       paths:
         - '{{ role_path }}/vars'
 - name: check for {{ k9s_install_dir }}
-  become: yes
+  become: true
   stat:
     path: '{{ k9s_install_dir }}'
   changed_when: False
@@ -20,37 +20,37 @@
 - when: not k9s_binary.stat.exists
   block:
     - name: download {{ k9s_url }}...
-      become: yes
+      become: true
       become_user: root
       get_url:
         url: '{{ k9s_url }}'
-        dest: '{{ k9s_tmp_tgz }}'
+        dest: '{{ k9s_tmp_archive }}'
         checksum: '{{ k9s_checksum }}'
         mode: 0644
     - name: mkdir {{ k9s_install_dir }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ k9s_install_dir }}'
         state: directory
         mode: 0755
-    - name: unarchive {{ k9s_tmp_tgz }}
-      become: yes
+    - name: unarchive {{ k9s_tmp_archive }}
+      become: true
       become_user: root
       unarchive:
-        remote_src: yes
-        src: '{{ k9s_tmp_tgz }}'
+        remote_src: true
+        src: '{{ k9s_tmp_archive }}'
         dest: '{{ k9s_install_dir }}'
         creates: '{{ k9s_installed_exe }}'
   always:
-    - name: rm {{ k9s_tmp_tgz }}
-      become: yes
+    - name: rm {{ k9s_tmp_archive }}
+      become: true
       become_user: root
       file:
-        path: '{{ k9s_tmp_tgz }}'
+        path: '{{ k9s_tmp_archive }}'
         state: absent
 - name: link {{ k9s_installed_link }} to {{ k9s_installed_exe }}
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ k9s_installed_exe }}'

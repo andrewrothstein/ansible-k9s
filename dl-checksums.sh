@@ -9,8 +9,9 @@ dl() {
     local lchecksums=$2
     local os=$3
     local arch=$4
+    local archive_type=${5:-tar.gz}
     local platform="${os}_${arch}"
-    local file="${APP}_${platform}.tar.gz"
+    local file="${APP}_${platform}.${archive_type}"
     local url=$MIRROR/$ver/$file
     printf "    # %s\n" $url
     printf "    %s: sha256:%s\n" $platform $(grep $file $lchecksums | awk '{print $1}')
@@ -36,9 +37,9 @@ dl_ver() {
     dl $ver $lchecksums Linux ppc64le
     dl $ver $lchecksums Linux s390x
     dl $ver $lchecksums Linux amd64
-    dl $ver $lchecksums Windows arm
-    dl $ver $lchecksums Windows arm64
-    dl $ver $lchecksums Windows amd64
+    dl $ver $lchecksums Windows arm zip
+    dl $ver $lchecksums Windows arm64 zip
+    dl $ver $lchecksums Windows amd64 zip
 }
 
-dl_ver ${1:-v0.27.3}
+dl_ver ${1:-v0.27.4}
