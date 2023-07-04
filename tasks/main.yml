@@ -15,7 +15,7 @@
   become: true
   stat:
     path: '{{ k9s_install_dir }}'
-  changed_when: False
+  changed_when: false
   register: k9s_binary
 - when: not k9s_binary.stat.exists
   block:
