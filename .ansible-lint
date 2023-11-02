@@ -1,0 +1,8 @@
+---
+exclude_paths:
+  - .github/
+  - .cache/
+  - ${HOME}/.ansible/roles/
+skip_list:
+  - experimental
+  - schema[meta]

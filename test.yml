@@ -1,9 +1,13 @@
 ---
-- hosts: all
+- name: "Run tests"
+  hosts: all
   roles:
-  - role: '{{ playbook_dir }}'
+    - role: '{{ playbook_dir }}'
   tasks:
-  - command: /usr/local/bin/k9s version
-    register: k9s_test_output
-  - debug:
-      msg: '{{ k9s_test_output.stdout }}'
+    - name: "Get k9s version"
+      ansible.builtin.command: /usr/local/bin/k9s version
+      changed_when: false
+      register: k9s_test_output
+    - name: "Print k9s version"
+      ansible.builtin.debug:
+        msg: '{{ k9s_test_output.stdout }}'
