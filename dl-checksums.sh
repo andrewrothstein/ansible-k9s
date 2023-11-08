@@ -19,7 +19,8 @@ dl() {
 
 dl_ver() {
     local ver=$1
-    local checksums="checksums.txt"
+    local checksums="checksums.sha256"
+    # https://github.com/derailed/k9s/releases/download/v0.28.0/checksums.sha256
     local url=$MIRROR/$ver/$checksums
     local lchecksums="$DIR/${APP}-${ver}-${checksums}"
     if [ ! -e $lchecksums ];
@@ -42,4 +43,4 @@ dl_ver() {
     dl $ver $lchecksums Windows amd64 zip
 }
 
-dl_ver ${1:-v0.27.4}
+dl_ver ${1:-v0.28.0}
