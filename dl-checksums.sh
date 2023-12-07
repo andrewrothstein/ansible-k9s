@@ -14,7 +14,7 @@ dl() {
     local file="${APP}_${platform}.${archive_type}"
     local url=$MIRROR/$ver/$file
     printf "    # %s\n" $url
-    printf "    %s: sha256:%s\n" $platform $(grep $file $lchecksums | awk '{print $1}')
+    printf "    %s: sha256:%s\n" $platform $(grep -e "$file\$" $lchecksums | awk '{print $1}')
 }
 
 dl_ver() {
@@ -33,14 +33,15 @@ dl_ver() {
 
     dl $ver $lchecksums Darwin arm64
     dl $ver $lchecksums Darwin amd64
-    dl $ver $lchecksums Linux arm
+    dl $ver $lchecksums Freebsd armv7
+    dl $ver $lchecksums Freebsd arm64
+    dl $ver $lchecksums Linux armv7
     dl $ver $lchecksums Linux arm64
     dl $ver $lchecksums Linux ppc64le
     dl $ver $lchecksums Linux s390x
     dl $ver $lchecksums Linux amd64
-    dl $ver $lchecksums Windows arm zip
     dl $ver $lchecksums Windows arm64 zip
     dl $ver $lchecksums Windows amd64 zip
 }
 
-dl_ver ${1:-v0.28.2}
+dl_ver ${1:-v0.29.1}
