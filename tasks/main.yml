@@ -3,7 +3,7 @@
   ansible.builtin.include_role:
     name: andrewrothstein.unarchivedeps
 - name: Resolve platform specific vars
-  ansiblbe.builtin.include_vars: '{{ item }}'
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
