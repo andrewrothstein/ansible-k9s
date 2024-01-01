@@ -1,8 +1,9 @@
 ---
-- include_role:
+- name: Install unarchivedeps
+  ansible.builtin.include_role:
     name: andrewrothstein.unarchivedeps
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Resolve platform specific vars
+  ansiblbe.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -11,48 +12,48 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: check for {{ k9s_install_dir }}
+- name: Check for {{ k9s_install_dir }}
   become: true
-  stat:
+  ansible.builtin.stat:
     path: '{{ k9s_install_dir }}'
   changed_when: false
   register: k9s_binary
 - when: not k9s_binary.stat.exists
   block:
-    - name: download {{ k9s_url }}...
+    - name: Download {{ k9s_url }}...
       become: true
       become_user: root
-      get_url:
+      ansible.builtin.get_url:
         url: '{{ k9s_url }}'
         dest: '{{ k9s_tmp_archive }}'
         checksum: '{{ k9s_checksum }}'
-        mode: 0644
-    - name: mkdir {{ k9s_install_dir }}
+        mode: '644'
+    - name: Mkdir {{ k9s_install_dir }}
       become: true
       become_user: root
-      file:
+      ansible.builtin.file:
         path: '{{ k9s_install_dir }}'
         state: directory
-        mode: 0755
-    - name: unarchive {{ k9s_tmp_archive }}
+        mode: '755'
+    - name: Unarchive {{ k9s_tmp_archive }}
       become: true
       become_user: root
-      unarchive:
+      ansible.builtin.unarchive:
         remote_src: true
         src: '{{ k9s_tmp_archive }}'
         dest: '{{ k9s_install_dir }}'
         creates: '{{ k9s_installed_exe }}'
   always:
-    - name: rm {{ k9s_tmp_archive }}
+    - name: Rm {{ k9s_tmp_archive }}
       become: true
       become_user: root
-      file:
+      ansible.builtin.file:
         path: '{{ k9s_tmp_archive }}'
         state: absent
-- name: link {{ k9s_installed_link }} to {{ k9s_installed_exe }}
+- name: Linking {{ k9s_installed_link }} to {{ k9s_installed_exe }}
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ k9s_installed_exe }}'
     dest: '{{ k9s_installed_link }}'
     state: link
