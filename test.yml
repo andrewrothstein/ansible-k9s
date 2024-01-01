@@ -6,6 +6,7 @@
         name: '{{ playbook_dir }}'
     - name: Executing 'k9s version'
       ansible.builtin.command: /usr/local/bin/k9s version
+      changed_when: false
       register: k9s_test_output
     - name: Output from 'k9s version'
       ansible.builtin.debug:
