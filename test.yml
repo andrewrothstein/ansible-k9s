@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
     - name: Install k9s
-      ansible.builtin.includ_role:
+      ansible.builtin.include_role:
         name: '{{ playbook_dir }}'
     - name: Executing 'k9s version'
       ansible.builtin.command: /usr/local/bin/k9s version
