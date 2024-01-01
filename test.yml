@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- name: Test install of k9s
+  hosts: all
   tasks:
     - name: Install k9s
       ansible.builtin.include_role:
