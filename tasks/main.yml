@@ -18,7 +18,8 @@
     path: '{{ k9s_install_dir }}'
   changed_when: false
   register: k9s_binary
-- when: not k9s_binary.stat.exists
+- name: Install if not installed
+  when: not k9s_binary.stat.exists
   block:
     - name: Download {{ k9s_url }}...
       become: true
