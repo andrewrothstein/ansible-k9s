@@ -1,9 +1,14 @@
 ---
-- hosts: all
-  roles:
-  - role: '{{ playbook_dir }}'
+- name: Test install of k9s
+  hosts: all
   tasks:
-  - command: /usr/local/bin/k9s version
-    register: k9s_test_output
-  - debug:
-      msg: '{{ k9s_test_output.stdout }}'
+    - name: Install k9s
+      ansible.builtin.include_role:
+        name: '{{ playbook_dir }}'
+    - name: Executing 'k9s version'
+      ansible.builtin.command: /usr/local/bin/k9s version
+      changed_when: false
+      register: k9s_test_output
+    - name: Output from 'k9s version'
+      ansible.builtin.debug:
+        msg: '{{ k9s_test_output.stdout }}'
