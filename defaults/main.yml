@@ -1,6 +1,6 @@
 ---
 # defaults file for k9s
-k9s_ver: v0.31.9
+k9s_ver: v0.32.0
 k9s_arch_map:
   armv7l: armv7
   aarch64: arm64
@@ -381,3 +381,27 @@ k9s_checksums:
     Windows_arm64: sha256:b4909159b75618f466538d7e7ca87c3ed59bc0217e3997ada3d18b807b7e4bc4
     # https://github.com/derailed/k9s/releases/download/v0.31.9/k9s_Windows_amd64.zip
     Windows_amd64: sha256:5c54571931d91bce5433ded790c3a3e09652ddbdd1c92ec7cc161edabcce3c47
+  # https://github.com/derailed/k9s/releases/download/v0.32.0/checksums.sha256
+  v0.32.0:
+    # https://github.com/derailed/k9s/releases/download/v0.32.0/k9s_Darwin_arm64.tar.gz
+    Darwin_arm64: sha256:1bdf4632eef8226c84aa33239ca727a8a7499630cea91ac8d86caf41a02964e5
+    # https://github.com/derailed/k9s/releases/download/v0.32.0/k9s_Darwin_amd64.tar.gz
+    Darwin_amd64: sha256:2e4ae6d7ff65d1a360ec6475a635ba563f98e5a7ba50e431d6c16555fb7cf0f2
+    # https://github.com/derailed/k9s/releases/download/v0.32.0/k9s_Freebsd_armv7.tar.gz
+    Freebsd_armv7: sha256:20bc697f8aa2dd0b6237d6538410e1177b9b7ec9b90b59d863f48d18590a2461
+    # https://github.com/derailed/k9s/releases/download/v0.32.0/k9s_Freebsd_arm64.tar.gz
+    Freebsd_arm64: sha256:d276420d0e044186ebd5379db498a42bf6e60f82beecb7ebabea5855482c5652
+    # https://github.com/derailed/k9s/releases/download/v0.32.0/k9s_Linux_armv7.tar.gz
+    Linux_armv7: sha256:57264aaa0e59bc090f6f31a1431c92a23e8ecce4729a1a26f2412ec9550023a0
+    # https://github.com/derailed/k9s/releases/download/v0.32.0/k9s_Linux_arm64.tar.gz
+    Linux_arm64: sha256:fdaf23ec21cd1dfb722d18bc8f59a9fd4b664242f5087b8c0f0c7138ebaac780
+    # https://github.com/derailed/k9s/releases/download/v0.32.0/k9s_Linux_ppc64le.tar.gz
+    Linux_ppc64le: sha256:81555daee2a295f2221d164cc26c0338e1886d54a40efa5f2c95248845d9b2ad
+    # https://github.com/derailed/k9s/releases/download/v0.32.0/k9s_Linux_s390x.tar.gz
+    Linux_s390x: sha256:5730fbc74c804f91afedca38515fbbf666f660a84c7846c3348164dac91d16e7
+    # https://github.com/derailed/k9s/releases/download/v0.32.0/k9s_Linux_amd64.tar.gz
+    Linux_amd64: sha256:3efa7e95695504d6fe8d12745368d8a908241c4949f631776aded2ddc506c6a6
+    # https://github.com/derailed/k9s/releases/download/v0.32.0/k9s_Windows_arm64.zip
+    Windows_arm64: sha256:6641031f2aabfaf514e00af14a60588e9f5d14c2118fbf943001827d931b0114
+    # https://github.com/derailed/k9s/releases/download/v0.32.0/k9s_Windows_amd64.zip
+    Windows_amd64: sha256:c351cfb4660c5438c8d051df570ff1abb303feff7f3424ad83ee3fc9fc3451cf
