@@ -1,7 +1,4 @@
 ---
-- name: Install unarchivedeps
-  ansible.builtin.include_role:
-    name: andrewrothstein.unarchivedeps
 - name: Resolve platform specific vars
   ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
@@ -36,6 +33,9 @@
         path: '{{ k9s_install_dir }}'
         state: directory
         mode: '755'
+    - name: Install unarchivedeps
+      ansible.builtin.include_role:
+        name: andrewrothstein.unarchivedeps
     - name: Unarchive {{ k9s_tmp_archive }}
       become: true
       become_user: root
