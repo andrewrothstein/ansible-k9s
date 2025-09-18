@@ -1009,8 +1009,6 @@ k9s_checksums:
     Darwin_arm64: sha256:caec596090e6cac4f49be1e77314e5a240523238ca85482cd4e8a47c17c81ffc
     # https://github.com/derailed/k9s/releases/download/v0.50.10/k9s_Darwin_amd64.tar.gz
     Darwin_amd64: sha256:916a37719c552bbccf25fd67af65853eef5e7533add380e1e0bcbd588aa36dfd
-    # https://github.com/derailed/k9s/releases/download/v0.50.10/k9s_Freebsd_armv7.tar.gz
-    Freebsd_armv7: sha256:
     # https://github.com/derailed/k9s/releases/download/v0.50.10/k9s_Freebsd_arm64.tar.gz
     Freebsd_arm64: sha256:d007de3dd98f2e436da22d4dd537cc469764b7329110b5ff54414e4dc306be75
     # https://github.com/derailed/k9s/releases/download/v0.50.10/k9s_Linux_armv7.tar.gz
