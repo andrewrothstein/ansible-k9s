@@ -33,7 +33,6 @@ dl_ver() {
 
     dl $ver $lchecksums Darwin arm64
     dl $ver $lchecksums Darwin amd64
-    dl $ver $lchecksums Freebsd armv7
     dl $ver $lchecksums Freebsd arm64
     dl $ver $lchecksums Linux armv7
     dl $ver $lchecksums Linux arm64
@@ -44,4 +43,4 @@ dl_ver() {
     dl $ver $lchecksums Windows amd64 zip
 }
 
-dl_ver ${1:-v0.50.11}
+dl_ver ${1:-v0.50.13}
