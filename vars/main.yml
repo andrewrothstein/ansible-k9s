@@ -1,7 +1,7 @@
 ---
 # vars file for k9s
-k9s_os: '{{ ansible_system }}'
-k9s_arch: '{{ k9s_arch_map[ansible_architecture] }}'
+k9s_os: '{{ ansible_facts["system"] }}'
+k9s_arch: '{{ k9s_arch_map[ansible_facts["architecture"]] }}'
 k9s_platform: '{{ k9s_os }}_{{ k9s_arch }}'
 k9s_archive: k9s_{{ k9s_ver }}_{{ k9s_platform }}.{{ k9s_archive_type | default("tar.gz") }}
 k9s_tmp_archive: /tmp/{{ k9s_archive }}
